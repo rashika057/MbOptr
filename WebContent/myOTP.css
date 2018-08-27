@@ -1,0 +1,65 @@
+@CHARSET "ISO-8859-1";
+.main {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+  height: 100%;
+  width: 100%;
+  position: fixed; /* Stay in place */
+  z-index: -1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;  
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+     /* Sit on top */
+	top: 0;
+    left: 0;
+	background-image: url('C:/Users/hus8kor/Documents/MobileOperator/WebContent/resources/background1.jpg');	
+	   }
+    .card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    position: relative;
+  	text-align: center;
+    border-radius: 5px;
+    display: inline-block;
+    background-color: white;
+    }
+.container {
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 32px;
+    padding-bottom: 33px;
+}
+.create{
+	font-family: Brush Script MT, Brush Script Std, cursive;
+}
+.input1{
+	text-size: 30px;
+	height: 30px;
+	width:100%;
+	backround-color: #c0c0c0;
+	border: 2px solid #ce310f;
+	border-radius: 4px;
+}
+input[type=text]{
+	backround-color: #c0c0c0;
+}
+
+/* On mouse-over, add a deeper shadow */
+.btnR{
+	background-color:#ce310f;border-radius:10px;border-color:black;padding:10px;
+	width:100%;
+}
+.btnP{background-color:#3b5998;border-radius:70px;border-color:black; padding:10px;}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
