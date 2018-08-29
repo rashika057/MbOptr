@@ -4,34 +4,60 @@
 <meta charset="UTF-8"/>
 <title>Mobile Operator</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="C:/Users/hus8kor/Documents/MobileOperator/WebContent/myOTP.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="C:/Users/hus8kor/Documents/Mobile-Operator/WebContent/myOTP.css" rel="stylesheet" type="text/css">
+<script>
+function validateForm() {
+ var x= document.forms["myForm"]["otp"].value;
+ if(x.length !=4){
+alert("Invalid OTP");
+return false;
+}
+}
+</script>
 </head>
 <body>
 	<div class="main">
-		<div class="card">
-    		<div class="container">
+		<div class="card" style="width:300px">
+		    		
           		<h1 class="create">We are waiting for your OTP</h1>
-          		<input class="input1" type="text" name="otp">
+          		<form name="myForm" action="file:///C:/Users/hus8kor/Documents/Mobile-Operator/WebContent/plandisplay.html" onsubmit="return validateForm()" method="post">
+          		<div id="divOuter">
+	<div id="divInner">
+		<input class="someinput" id="partitioned" type="number" maxlength="4" name="otp" required/>
+	</div>
+    </div>
           		<div style="padding-top:30px">
-          		<button class="btnP">
-          		<img alt="GO" src="C:/Users/hus8kor/Documents/MobileOperator/WebContent/resources/arrow.png" height="40px" width="40px" >
+          		<button class="btnP" type="submit">
+          		<span class="glyphicon glyphicon-circle-arrow-right" style="margin-right:10px"></span>GO
           		</button>
           		</div>
-          		<div style="padding-top:30px">
-          		<button class="btnR create">
+          		
+          			   		</form>
+          			   		<div style="padding-top:30px">
+          		<button class="btnR create" onclick="func()")">
           		Resend the OTP on <span id="demo"></span>
           			</button>
-          		</div>
+          			   		</div>
   			</div>
 		</div>
-	</div>
-	<p id="demo"></p>
+
 	<script>
-	window.onload=function(){
+	function func()
+	{alert("OTP has been sent successfully");}
+	</script>
+	<script>
+		window.onload=function(){
 		var x='9956782314';
-		//x=document.getElementById("myText").value;		
+		//x=document.getElementById("mob").value;		
 		document.getElementById("demo").innerHTML=x;
-	}
+			}
 	</script>
 </body>
 </html>
